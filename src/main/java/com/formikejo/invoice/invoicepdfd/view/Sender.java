@@ -3,7 +3,6 @@ package com.formikejo.invoice.invoicepdfd.view;
 
 public class Sender {
 
-    private String name;
     private String address;
     private String email;
     private String telephone;
@@ -13,9 +12,8 @@ public class Sender {
     private String bankAccount;
     private String vatNumber;
 
-    public Sender(String nName, String nAddress, String nPostalCode, String nEmail, String nTelephone, String nCompanyName,
+    public Sender( String nAddress, String nPostalCode, String nEmail, String nTelephone, String nCompanyName,
                   String nCompanyIdentification, String nBankAccount, String nVatNumber) {
-        name = nName;
         address = nAddress;
         email = nEmail;
         postalCode = nPostalCode;
@@ -24,10 +22,6 @@ public class Sender {
         companyIdentification = nCompanyIdentification;
         bankAccount = nBankAccount;
         vatNumber = nVatNumber;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public String getAddress() {

@@ -18,10 +18,10 @@
 <table class="table">
     <thead>
     <tr>
-        <td>Omschrijving</td>
-        <td class="amount">Aantal</td>
-        <td class="amount">Tarief</td>
-        <td class="amount">Bedrag</td>
+        <td><b>Omschrijving</b></td>
+        <td class="amount"><b>Aantal</b></td>
+        <td class="amount"><b>Tarief</b></td>
+        <td class="amount"><b>Bedrag</b></td>
     </tr>
     </thead>
     <tbody>
@@ -52,10 +52,10 @@
         <td class="amount">&euro; ${bill.tax?string["#.00"]}
     </tr>
     <tr class="totalAmount">
-        <td>Totaal factuurbedrag
+        <td><b>Totaal factuurbedrag</b>
         <td>
         <td>
-        <td class="totalAmount">&euro; ${bill.total?string["#.00"]}
+        <td class="totalAmount"><b>&euro; ${bill.total?string["#.00"]}</b>
     </tr>
     </tfoot>
 </table>
@@ -66,7 +66,7 @@
 
 <p>
 
-<p class="KvKreminder">KvK: ${sender.companyIdentification}<br> BTW nummer: ${sender.vatNumber}<br>Bank:
+<p class="KvKreminder">KvK: ${sender.companyIdentification}<br> ${bill.taxType} nummer: ${sender.vatNumber}<br>Bank:
     ${sender.bankAccount}</p>
 
 <p class="bottomAdress">${sender.address} <br> ${sender.postalCode} </p>

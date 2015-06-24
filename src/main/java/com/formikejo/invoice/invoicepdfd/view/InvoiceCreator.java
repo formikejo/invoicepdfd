@@ -53,7 +53,6 @@ public class InvoiceCreator {
                 xpathEval("/Invoice/OrderReference//ID"));
 
         Sender sender = new Sender(
-                xpathEval("//AccountingSupplierParty//Contact//Name"),
                 xpathEval("//AccountingSupplierParty//PostalAddress//StreetName") + " " + xpathEval("//AccountingSupplierParty//PostalAddress//BuildingNumber") + ", " + xpathEval("//AccountingSupplierParty//PostalAddress//BuildingName"),
                 xpathEval("//AccountingSupplierParty//PostalAddress//PostalZone") + " " + xpathEval("//AccountingSupplierParty//PostalAddress//CityName") + ", " + xpathEval("//AccountingSupplierParty//PostalAddress//CountrySubentity"),
                 xpathEval("//AccountingSupplierParty//Contact//ElectronicMail"),
