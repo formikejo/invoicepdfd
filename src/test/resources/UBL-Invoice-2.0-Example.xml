@@ -186,7 +186,7 @@
 		</cac:TaxSubtotal>
 	</cac:TaxTotal>
 	<cac:LegalMonetaryTotal>
-		<cbc:LineExtensionAmount currencyID="GBP">100.00</cbc:LineExtensionAmount>
+		<cbc:LineExtensionAmount currencyID="GBP">90.00</cbc:LineExtensionAmount>
 		<cbc:TaxExclusiveAmount currencyID="GBP">90.00</cbc:TaxExclusiveAmount>
 		<cbc:AllowanceTotalAmount currencyID="GBP">10.00</cbc:AllowanceTotalAmount>
 		<cbc:PayableAmount currencyID="GBP">107.50</cbc:PayableAmount>

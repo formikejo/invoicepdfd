@@ -40,22 +40,22 @@
         <td>
     </tr>
     <tr>
-        <td>Subtotaal (exclusief BTW)
+        <td>Subtotaal (exclusief ${bill.taxType})
         <td>
         <td>
-        <td class="subtotalRow"><span>&euro; 6,000,000.00</span>
+        <td class="subtotalRow"><span>&euro; ${bill.subTotal?string["#.00"]}</span>
     </tr>
     <tr>
-        <td>BTW 21%
+        <td>${bill.taxType} ${bill.taxPercent?string["#.00"]}%
         <td>
         <td>
-        <td class="amount">&euro; 1,300.00
+        <td class="amount">&euro; ${bill.tax?string["#.00"]}
     </tr>
     <tr class="totalAmount">
         <td>Totaal factuurbedrag
         <td>
         <td>
-        <td class="totalAmount">&euro; 6,001,300.00
+        <td class="totalAmount">&euro; ${bill.total?string["#.00"]}
     </tr>
     </tfoot>
 </table>

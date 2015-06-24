@@ -39,7 +39,7 @@ public class InvoiceCreatorTest {
 
 	@Test
 	public void testBill() {
-		assertThat(view.getBill().getTotalAmount(), is(new BigDecimal("107.50")));
+		assertThat(view.getBill().getSubTotal(), is(new BigDecimal("90.00")));
 	}
 
 

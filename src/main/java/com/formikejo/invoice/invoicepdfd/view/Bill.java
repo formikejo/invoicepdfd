@@ -6,18 +6,42 @@ import java.util.List;
 
 public class Bill {
     private List<InvoiceLine> invoiceLines;
-    private BigDecimal totalAmount;
+    private BigDecimal subTotal ;
+    private BigDecimal tax ;
+    private String taxType;
+    private BigDecimal taxPercent;
+    private BigDecimal total;
 
-    public Bill(List<InvoiceLine> invoiceLines, BigDecimal totalAmount) {
+    public Bill(List<InvoiceLine> invoiceLines, BigDecimal subTotal, BigDecimal tax,String taxType,BigDecimal taxPercent, BigDecimal total) {
         this.invoiceLines = invoiceLines;
-        this.totalAmount = totalAmount;
+        this.total = total;
+        this.subTotal = subTotal;
+        this.tax = tax;
+        this.taxType = taxType;
+        this.taxPercent = taxPercent;
     }
 
     public List<InvoiceLine> getInvoiceLines() {
         return invoiceLines;
     }
 
-    public BigDecimal getTotalAmount() {
-        return totalAmount;
+    public BigDecimal getTotal() {
+        return total;
+    }
+
+    public BigDecimal getSubTotal() {
+        return subTotal;
+    }
+
+    public BigDecimal getTax() {
+        return tax;
+    }
+
+    public BigDecimal getTaxPercent() {
+        return taxPercent;
+    }
+
+    public String getTaxType() {
+        return taxType;
     }
 }

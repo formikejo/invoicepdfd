@@ -24,7 +24,14 @@ public class InvoiceCreator {
         InvoiceLine line2 = new InvoiceLine("More stuff", BigDecimal.valueOf(34), BigDecimal.valueOf(34), BigDecimal.valueOf(34000));
         List<InvoiceLine> lines = Arrays.asList(line1, line2);
 
-        Bill bill1 = new Bill(lines, new BigDecimal(xpathEval("//LegalMonetaryTotal/PayableAmount")));
+
+        BigDecimal subTotal = new BigDecimal(xpathEval("//LegalMonetaryTotal/LineExtensionAmount"));
+        BigDecimal tax = new BigDecimal(xpathEval("//TaxTotal/TaxAmount"));
+        BigDecimal total = new BigDecimal(xpathEval("//LegalMonetaryTotal/PayableAmount"));
+        String taxType = (xpathEval("//TaxTotal//TaxScheme//TaxTypeCode"));
+        BigDecimal taxPercent = new BigDecimal(xpathEval("//TaxTotal//TaxCategory//Percent"));
+
+        Bill bill1 = new Bill(lines, subTotal,tax,taxType,taxPercent,total);
 
         Receiver receiver = new Receiver(
                 xpathEval("//AccountingCustomerParty//Contact//Name"),
