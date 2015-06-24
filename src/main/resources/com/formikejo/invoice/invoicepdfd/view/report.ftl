@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="/assets/ReportStyle.css">
+    <link rel="stylesheet" type="text/css" href="assets/ReportStyle.css">
+    <link rel="stylesheet" type="text/css" href="assets/Color Sceme 1.css">
     <title>Invoice Template 1</title>
 </head>
 <body>
-<h1 class="title">Publysher</h1>
 
-<h2 class="subTitle">Factuur </h2>
+<div class = title>
+<img class = img src="/assets/logos/Document1.png"">
+    </div>
 
 <p class="customer-name">${receiver.companyName}</p>
 
-<p class="TxtBoxFactuurnummer">${issueDate}<br>Referentie: ${receiver.orderReferenceID}<br>Factuurnummer: ${id}</p>
+<p class="TxtBoxFactuurnummer">
+    ${issueDate}<br>
+    <#if receiver.orderReferenceID?has_content>Referentie: ${receiver.orderReferenceID}<br></#if>
+    <#if id?has_content>Factuurnummer: ${id}</#if></p>
 
-<p>t.a.v. ${receiver.name} <br> ${receiver.streetName} <br> ${receiver.postalCode}</p>
+<p class= "TopRecieverBox">t.a.v. ${receiver.name} <br> ${receiver.streetName} <br> ${receiver.postalCode}</p>
 
 <table class="table">
     <thead>
     <tr>
-        <td><b>Omschrijving</b></td>
-        <td class="amount"><b>Aantal</b></td>
-        <td class="amount"><b>Tarief</b></td>
-        <td class="amount"><b>Bedrag</b></td>
+        <td class="TableTitles">Omschrijving</td>
+        <td class="TableTitlesamount"><b>Aantal</b></td>
+        <td class="TableTitlesamount"><b>Tarief</b></td>
+        <td class="TableTitlesamount"><b>Bedrag</b></td>
     </tr>
     </thead>
     <tbody>
@@ -38,12 +43,14 @@
     </#list>
     <tr>
         <td class="spacer">
+        <td>
+        <td>
+        <td>
     </tr>
 
     </tbody>
     <tfoot>
     <tr class="footspacer">
-        <td>
     </tr>
     <tr>
         <td>Subtotaal (exclusief ${bill.taxType})
@@ -58,10 +65,10 @@
         <td class="amount">&euro; ${bill.tax?string["#.00"]}
     </tr>
     <tr class="totalAmount">
-        <td><b>Totaal factuurbedrag</b>
+        <td class="totalAmount"><b>Totaal factuurbedrag</b>
         <td>
         <td>
-        <td class="totalAmount"><b>&euro; ${bill.total?string["#.00"]}</b>
+        <td class="totalAmountamount">&euro; ${bill.total?string["#.00"]}
     </tr>
     </tfoot>
 </table>
@@ -72,11 +79,17 @@
 
 <p>
 
-<p class="KvKreminder">KvK: ${sender.companyIdentification}<br> ${bill.taxType} nummer: ${sender.vatNumber}<br>Bank:
-    ${sender.bankAccount}</p>
+<p class="KvKreminder">
+        <#if sender.companyIdentification?has_content>KvK: ${sender.companyIdentification}<br></#if>
+        <#if sender.vatNumber?has_content>${bill.taxType} nummer: ${sender.vatNumber}<br></#if>
+        <#if sender.bankAccount?has_content>Bank:${sender.bankAccount} </#if>
+</p>
 
 <p class="bottomAdress">${sender.address} <br> ${sender.postalCode} </p>
 
-<p class="bottomTelephone">T: ${sender.telephone} <br>E: ${sender.email} </p>
+<p class="bottomTelephone">
+    <#if sender.telephone?has_content>T: ${sender.telephone}<br></#if>
+    <#if sender.email?has_content>E: ${sender.email} </#if>
+</p>
 </body>
 </html>

@@ -5,77 +5,70 @@
         xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
     <!-->Invoice Info Start     Invoice Info Start     Invoice Info Start     Invoice Info Start     Invoice Info Start</!-->
-    <cbc:ID>A00095678</cbc:ID>
+    <cbc:ID>602</cbc:ID>
     <cbc:IssueDate>2005-06-21</cbc:IssueDate>
     <cac:OrderReference>
-        <cbc:ID>AEG012345</cbc:ID>
+        <cbc:ID></cbc:ID>
     </cac:OrderReference>
     <!-->Invoice Info End     Invoice Info End     Invoice Info End     Invoice Info End     Invoice Info End</!-->
     <!-->Sender Start     Sender Start     Sender Start     Sender Start     Sender Start     Sender Start</!-->
     <cac:AccountingSupplierParty>
-        <cbc:CustomerAssignedAccountID>CO001</cbc:CustomerAssignedAccountID>
         <cac:Party>
             <cac:PartyName>
-                <cbc:Name>Consortial</cbc:Name>
+                <cbc:Name>Corpus Company</cbc:Name>
             </cac:PartyName>
             <cac:PostalAddress>
-                <cbc:StreetName>Busy Street</cbc:StreetName>
-                <cbc:BuildingName>Thereabouts</cbc:BuildingName>
-                <cbc:BuildingNumber>56A</cbc:BuildingNumber>
-                <cbc:CityName>Farthing</cbc:CityName>
-                <cbc:PostalZone>AA99 1BB</cbc:PostalZone>
-                <cbc:CountrySubentity>Heremouthshire</cbc:CountrySubentity>
+                <cbc:StreetName>Hoekschenwaardweg</cbc:StreetName>
+                <cbc:BuildingName></cbc:BuildingName>
+                <cbc:BuildingNumber>226</cbc:BuildingNumber>
+                <cbc:CityName>Amsterdam</cbc:CityName>
+                <cbc:PostalZone>1025 PD</cbc:PostalZone>
+                <cbc:CountrySubentity></cbc:CountrySubentity>
                 <cac:Country>
-                    <cbc:IdentificationCode>GB</cbc:IdentificationCode>
+                    <cbc:IdentificationCode>NL</cbc:IdentificationCode>
                 </cac:Country>
             </cac:PostalAddress>
             <cac:PartyTaxScheme>
-                <cbc:RegistrationName>Farthing Purchasing Consortia</cbc:RegistrationName>
-                <cbc:CompanyID>175 269 2355</cbc:CompanyID>
+                <cbc:RegistrationName></cbc:RegistrationName>
+                <cbc:CompanyID></cbc:CompanyID>
 
                 <cac:TaxScheme>
-                    <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    <cbc:TaxTypeCode>BTW</cbc:TaxTypeCode>
                 </cac:TaxScheme>
             </cac:PartyTaxScheme>
             <cac:PartyIdentification>
                 <cbc:ID>3759759732957</cbc:ID>
             </cac:PartyIdentification>
             <cac:Contact>
-                <cbc:Name>Mrs Bouquet</cbc:Name>
-                <cbc:Telephone>0158 1233714</cbc:Telephone>
-                <cbc:ElectronicMail>bouquet@fpconsortial.co.uk</cbc:ElectronicMail>
+                <cbc:Telephone>06-55577152</cbc:Telephone>
+                <cbc:ElectronicMail>info@corpusCompany.nl</cbc:ElectronicMail>
             </cac:Contact>
         </cac:Party>
     </cac:AccountingSupplierParty>
     <!-->Sender End     Sender End     Sender End     Sender End     Sender End     Sender End</!-->
     <!-->Receiver Start     Receiver Start     Receiver Start     Receiver Start     Receiver Start     Receiver Start</!-->
     <cac:AccountingCustomerParty>
-        <cbc:CustomerAssignedAccountID>XFB01</cbc:CustomerAssignedAccountID>
-        <cbc:SupplierAssignedAccountID>GT00978567</cbc:SupplierAssignedAccountID>
         <cac:Party>
             <cac:PartyName>
-                <cbc:Name>IYT Corporation</cbc:Name>
+                <cbc:Name></cbc:Name>
             </cac:PartyName>
             <cac:PostalAddress>
-                <cbc:StreetName>Avon Way</cbc:StreetName>
-                <cbc:BuildingName>House 2</cbc:BuildingName>
-                <cbc:BuildingNumber>85B</cbc:BuildingNumber>
-                <cbc:CityName>Bridgtow</cbc:CityName>
-                <cbc:PostalZone>ZZ99 1ZZ</cbc:PostalZone>
-                <cbc:CountrySubentity>Avon</cbc:CountrySubentity>
+                <cbc:StreetName>Henk Henrietstaat</cbc:StreetName>
+                <cbc:BuildingName></cbc:BuildingName>
+                <cbc:BuildingNumber>113</cbc:BuildingNumber>
+                <cbc:CityName>Amsterdam</cbc:CityName>
+                <cbc:PostalZone>1061 VB</cbc:PostalZone>
+                <cbc:CountrySubentity></cbc:CountrySubentity>
                 <cac:AddressLine>
-                    <cbc:Line>3rd Floor, Room 5</cbc:Line>
+                    <cbc:Line></cbc:Line>
                 </cac:AddressLine>
                 <cac:Country>
-                    <cbc:IdentificationCode>GB</cbc:IdentificationCode>
+                    <cbc:IdentificationCode>NL</cbc:IdentificationCode>
                 </cac:Country>
             </cac:PostalAddress>
 
             <cac:Contact>
-                <cbc:Name>Mr Fred Churchill</cbc:Name>
-                <cbc:Telephone>0127 2653214</cbc:Telephone>
-                <cbc:Telefax>0127 2653215</cbc:Telefax>
-                <cbc:ElectronicMail>fred@iytcorporation.gov.uk</cbc:ElectronicMail>
+                <cbc:Name>Yigal Duppen</cbc:Name>
             </cac:Contact>
 
         </cac:Party>
@@ -89,98 +82,88 @@
             <cbc:BuildingNumber>56A</cbc:BuildingNumber>
             <cbc:CityName>Bridgtow</cbc:CityName>
             <cbc:PostalZone>ZZ99 1ZZ</cbc:PostalZone>
-            <cbc:CountrySubentity>Avon</cbc:CountrySubentity>
+            <cbc:CountrySubentity></cbc:CountrySubentity>
             <cac:AddressLine>
-                <cbc:Line>3rd Floor, Room 5</cbc:Line>
+                <cbc:Line></cbc:Line>
             </cac:AddressLine>
             <cac:Country>
-                <cbc:IdentificationCode>GB</cbc:IdentificationCode>
+                <cbc:IdentificationCode>NL</cbc:IdentificationCode>
             </cac:Country>
         </cac:DeliveryAddress>
     </cac:Delivery>
 
     <!-->Bank Details Start</!-->
     <cac:PaymentMeans>
-        <cbc:PaymentMeansCode>20</cbc:PaymentMeansCode>
-        <cbc:PaymentDueDate>2005-07-21</cbc:PaymentDueDate>
         <cac:PayeeFinancialAccount>
-            <cbc:ID>12345678</cbc:ID>
-            <cbc:Name>Farthing Purchasing Consortia</cbc:Name>
-            <cbc:AccountTypeCode>Current</cbc:AccountTypeCode>
-            <cbc:CurrencyCode>GBP</cbc:CurrencyCode>
+            <cbc:ID></cbc:ID>
+            <cbc:Name></cbc:Name>
+            <cbc:CurrencyCode>Euro</cbc:CurrencyCode>
             <cac:Country>
-                <cbc:IdentificationCode>GB</cbc:IdentificationCode>
+                <cbc:IdentificationCode>NL</cbc:IdentificationCode>
             </cac:Country>
         </cac:PayeeFinancialAccount>
     </cac:PaymentMeans>
 
     <!-->Payment Note Start</!-->
     <cac:PaymentTerms>
-        <cbc:Note>Payable within 1 calendar month from the invoice date</cbc:Note>
+        <cbc:Note>Gelieve het totaalbedrag binnen 14 dagen over te maken op rekening nummer: NL54 KNAB 0731 9207 75 op naam van Corpus Company BV</cbc:Note>
     </cac:PaymentTerms>
 
     <!-->TAX Start</!-->
     <cac:TaxTotal>
-        <cbc:TaxAmount currencyID="GBP">17.50</cbc:TaxAmount>
-        <cbc:TaxEvidenceIndicator>true</cbc:TaxEvidenceIndicator>
+        <cbc:TaxAmount currencyID="Euro">4.34</cbc:TaxAmount>
         <cac:TaxSubtotal>
-            <cbc:TaxableAmount currencyID="GBP">100.00</cbc:TaxableAmount>
-            <cbc:TaxAmount currencyID="GBP">17.50</cbc:TaxAmount>
+            <cbc:TaxableAmount currencyID="Euro">20.66</cbc:TaxableAmount>
+            <cbc:TaxAmount currencyID="Euro">4.34</cbc:TaxAmount>
             <cac:TaxCategory>
-                <cbc:ID>A</cbc:ID>
                 <cac:TaxScheme>
-                    <cbc:ID>UK VAT</cbc:ID>
-                    <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    <cbc:TaxTypeCode>BTW</cbc:TaxTypeCode>
                 </cac:TaxScheme>
             </cac:TaxCategory>
         </cac:TaxSubtotal>
     </cac:TaxTotal>
     <cac:LegalMonetaryTotal>
-        <cbc:TaxExclusiveAmount currencyID="GBP">90.00</cbc:TaxExclusiveAmount>
-        <cbc:PayableAmount currencyID="GBP">107.50</cbc:PayableAmount>
+        <cbc:TaxExclusiveAmount currencyID="Euro">20.66</cbc:TaxExclusiveAmount>
+        <cbc:PayableAmount currencyID="Euro">25.00</cbc:PayableAmount>
     </cac:LegalMonetaryTotal>
     <!-->TAX End</!-->
     <!-->Product Start      Product Start      Product Start      Product Start      Product Start      Product Start</!-->
         <cac:InvoiceLine>
             <cbc:ID>A</cbc:ID>
-            <cbc:InvoicedQuantity unitCode="KG">90</cbc:InvoicedQuantity>
-            <cbc:LineExtensionAmount currencyID="GBP">90.00</cbc:LineExtensionAmount>
+            <cbc:InvoicedQuantity unitCode="Pieces">1</cbc:InvoicedQuantity>
+            <cbc:LineExtensionAmount currencyID="Euro">20.66</cbc:LineExtensionAmount>
             <cac:OrderLineReference>
-                <cbc:LineID>1</cbc:LineID>
-                <cbc:SalesOrderLineID>A</cbc:SalesOrderLineID>
-                <cbc:LineStatusCode>NoStatus</cbc:LineStatusCode>
                 <cac:OrderReference>
-                    <cbc:ID>AEG012345</cbc:ID>
-                    <cbc:SalesOrderID>CON0095678</cbc:SalesOrderID>
-                    <cbc:UUID>6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1</cbc:UUID>
-                    <cbc:IssueDate>2005-06-20</cbc:IssueDate>
+                    <cbc:ID></cbc:ID>
+                    <cbc:SalesOrderID></cbc:SalesOrderID>
+                    <cbc:UUID></cbc:UUID>
+                    <cbc:IssueDate>2015-06-22</cbc:IssueDate>
                 </cac:OrderReference>
             </cac:OrderLineReference>
             <cac:TaxTotal>
-                <cbc:TaxAmount currencyID="GBP">17.50</cbc:TaxAmount>
-                <cbc:TaxEvidenceIndicator>true</cbc:TaxEvidenceIndicator>
+                <cbc:TaxAmount currencyID="Euro">4.34</cbc:TaxAmount>
                 <cac:TaxSubtotal>
-                    <cbc:TaxableAmount currencyID="GBP">100.00</cbc:TaxableAmount>
-                    <cbc:TaxAmount currencyID="GBP">17.50</cbc:TaxAmount>
+                    <cbc:TaxableAmount currencyID="GBP">20.66</cbc:TaxableAmount>
+                    <cbc:TaxAmount currencyID="GBP">4.34</cbc:TaxAmount>
                     <cac:TaxCategory>
                         <cbc:ID>A</cbc:ID>
-                        <cbc:Percent>17.5</cbc:Percent>
+                        <cbc:Percent>21.0</cbc:Percent>
                         <cac:TaxScheme>
-                            <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                            <cbc:TaxTypeCode>BTW</cbc:TaxTypeCode>
                         </cac:TaxScheme>
                     </cac:TaxCategory>
                 </cac:TaxSubtotal>
             </cac:TaxTotal>
             <cac:Item>
-                <cbc:Description>Acme beeswax</cbc:Description>
-                <cbc:Name>beeswax</cbc:Name>
+                <cbc:Description></cbc:Description>
+                <cbc:Name>10 ritten sportkaart Corpus Fit</cbc:Name>
                 <cac:SellersItemIdentification>
-                    <cbc:ID>17589683</cbc:ID>
+                    <cbc:ID></cbc:ID>
                 </cac:SellersItemIdentification>
             </cac:Item>
             <cac:Price>
-                <cbc:PriceAmount currencyID="GBP">1.00</cbc:PriceAmount>
-                <cbc:BaseQuantity unitCode="KG">1</cbc:BaseQuantity>
+                <cbc:PriceAmount currencyID="Euro">20.66</cbc:PriceAmount>
+                <cbc:BaseQuantity unitCode="Euro">1</cbc:BaseQuantity>
             </cac:Price>
         </cac:InvoiceLine>
     <!-->Product End      Product End      Product End      Product End      Product End      Product End</!-->

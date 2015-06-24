@@ -1,0 +1,79 @@
+html{
+
+}
+
+
+table {
+
+}
+
+p {
+
+}
+
+.title{
+
+
+}
+.img{
+width:450px;
+}
+
+.customer-name {
+
+}
+
+.reminder {
+color: #0099CC
+}
+
+
+.KvKreminder {
+
+}
+.TxtBoxFactuurnummer{
+color: #0099CC
+
+}
+.totalAmount{
+
+background-color: #0099CC;
+color: white;
+}
+.totalAmountamount{
+color: white;
+}
+.bottomCompanyName{
+color: #0099CC
+}
+.bottomTelephone{
+
+}
+.bottomAdress{
+
+}
+.TableTitlesamount{
+background-color: #66CCFF;
+}
+.TableTitles{
+background-color: #66CCFF
+}
+td.subtotalRow span{
+
+}
+
+td.subtotalRow{
+
+}
+
+
+.amount {
+
+
+}
+table
+{
+    border-color: #600;
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+}

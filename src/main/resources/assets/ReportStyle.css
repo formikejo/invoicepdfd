@@ -7,23 +7,16 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top:36px;
-}
+   }
 
 p {
     margin: 0;
 }
 
-.title{
-text-align: right;
-color: #d55921;
-font-size: 50px;
+.TopRecieverBox{
+margin-top: 50px;
 }
 
-.subTitle{
-color: #464644;
-text-align: right;
-font-style: italic;
-}
 
 .customer-name {
     margin-top: 16px;
@@ -43,13 +36,18 @@ font-style: italic;
 .TxtBoxFactuurnummer{
     text-align: right;
      float: right;
+     margin-top: 50px;
 }
 .totalAmount{
 border-top: 1px solid black;
+font-weight: bold;
+padding-top: 10px;
+padding-bottom: 10px;
 }
-.totalAmount td.totalAmount{
-text-align: right;
-}
+.totalAmountamount{
+ text-align: right;
+ }
+
 .bottomCompanyName{
 padding-top: 100px;
 }
@@ -59,6 +57,12 @@ margin-top: 12px;
 .bottomAdress{
 margin-top: 32px;
 }
+.TableTitlesamount{
+ text-align: right;
+ }
+ .TableTitles{
+font-weight: bold;
+ }
 
 td.subtotalRow span{
     border-top: 1px solid black;
@@ -91,4 +95,8 @@ padding-bottom: 40px;
 thead tr td {
     border-bottom: 1px solid black;
     border-top: 1px solid black;
+}
+table td{
+    padding-right:10px;
+    padding-left:10px;
 }
