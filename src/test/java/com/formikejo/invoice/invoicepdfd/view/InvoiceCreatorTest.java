@@ -18,35 +18,34 @@ import static org.junit.Assert.assertThat;
 
 public class InvoiceCreatorTest {
 
-	InvoiceView view;
+    InvoiceView view;
 
-	@Before
-	public void setUp() throws ParserConfigurationException, IOException, SAXException, XPathExpressionException {
-		Document d = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(getClass().getResourceAsStream("/UBL-Invoice-2.0-Example.xml"));
-		InvoiceCreator creator = new InvoiceCreator(d);
-		view = creator.getDataFromXML();
-	}
+    @Before
+    public void setUp() throws ParserConfigurationException, IOException, SAXException, XPathExpressionException {
+        Document d = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(getClass().getResourceAsStream("/UBL-Invoice-2.0-Example.xml"));
+        InvoiceCreator creator = new InvoiceCreator(d);
+        view = creator.getDataFromXML();
+    }
 
-	@Test
-	public void testSender() {
-		assertThat(view.getSender().getCompanyName(), is("Consortial"));
-		// todo: check other sender fields
-	}
+    @Test
+    public void testSender() {
+        assertThat(view.getSender().getCompanyName(), is("Consortial"));
+        // todo: check other sender fields
+    }
 
-	@Test
-	public void testReceiver() {
-		assertThat(view.getReceiver().getCompanyName(), is("IYT Corporation"));
-		// todo: check other receiver fields
-	}
+    @Test
+    public void testReceiver() {
+        assertThat(view.getReceiver().getCompanyName(), is("IYT Corporation"));
+        // todo: check other receiver fields
+    }
 
-	@Test
-	public void testBill() {
-		assertThat(view.getBill().getSubTotal(), is(new BigDecimal("90.00")));
+    @Test
+    public void testBill() {
+        assertThat(view.getBill().getSubTotal(), is(new BigDecimal("90.00")));
 
-		List<InvoiceLine> lines = view.getBill().getInvoiceLines();
-		assertThat(lines, hasSize(1));
-	}
-
+        List<InvoiceLine> lines = view.getBill().getInvoiceLines();
+        assertThat(lines, hasSize(1));
+    }
 
 
 }

@@ -34,7 +34,7 @@ public class InvoiceCreator {
             BigDecimal amount = new BigDecimal(xpath.evaluate("InvoicedQuantity", invoiceLine));
             BigDecimal value = new BigDecimal(xpath.evaluate("LineExtensionAmount", invoiceLine));
 
-            lines.add(new InvoiceLine(description ,amount ,rate ,value ));
+            lines.add(new InvoiceLine(description, amount, rate, value));
         }
 
         BigDecimal subTotal = new BigDecimal(xpathEval("//LegalMonetaryTotal/LineExtensionAmount"));
@@ -43,7 +43,7 @@ public class InvoiceCreator {
         String taxType = (xpathEval("//TaxTotal//TaxScheme//TaxTypeCode"));
         BigDecimal taxPercent = new BigDecimal(xpathEval("//TaxTotal//TaxCategory//Percent"));
 
-        Bill bill1 = new Bill(lines, subTotal,tax,taxType,taxPercent,total);
+        Bill bill = new Bill(lines, subTotal, tax, taxType, taxPercent, total);
 
         Receiver receiver = new Receiver(
                 xpathEval("//AccountingCustomerParty//Contact//Name"),
@@ -65,9 +65,9 @@ public class InvoiceCreator {
 
         String issueDate = xpathEval("/Invoice/IssueDate");
         String invoiceID = xpathEval("/Invoice/ID");
-        String paymentTerms =  xpathEval("/Invoice/PaymentTerms");
+        String paymentTerms = xpathEval("/Invoice/PaymentTerms");
 
-        return new InvoiceView(receiver, sender, bill1,issueDate , invoiceID, paymentTerms);
+        return new InvoiceView(receiver, sender, bill, issueDate, invoiceID, paymentTerms);
     }
 
     private String xpathEval(String path) throws XPathExpressionException {

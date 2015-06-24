@@ -6,13 +6,13 @@ import java.util.List;
 
 public class Bill {
     private List<InvoiceLine> invoiceLines;
-    private BigDecimal subTotal ;
-    private BigDecimal tax ;
+    private BigDecimal subTotal;
+    private BigDecimal tax;
     private String taxType;
     private BigDecimal taxPercent;
     private BigDecimal total;
 
-    public Bill(List<InvoiceLine> invoiceLines, BigDecimal subTotal, BigDecimal tax,String taxType,BigDecimal taxPercent, BigDecimal total) {
+    public Bill(List<InvoiceLine> invoiceLines, BigDecimal subTotal, BigDecimal tax, String taxType, BigDecimal taxPercent, BigDecimal total) {
         this.invoiceLines = invoiceLines;
         this.total = total;
         this.subTotal = subTotal;
