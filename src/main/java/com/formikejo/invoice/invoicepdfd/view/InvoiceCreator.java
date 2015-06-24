@@ -1,12 +1,15 @@
 package com.formikejo.invoice.invoicepdfd.view;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 import java.math.BigDecimal;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -20,10 +23,17 @@ public class InvoiceCreator {
 
     public InvoiceView getDataFromXML() throws XPathExpressionException {
 
-        InvoiceLine line1 = new InvoiceLine("Stuff", BigDecimal.valueOf(14), BigDecimal.valueOf(75), BigDecimal.valueOf(5000000));
-        InvoiceLine line2 = new InvoiceLine("More stuff", BigDecimal.valueOf(34), BigDecimal.valueOf(34), BigDecimal.valueOf(34000));
-        List<InvoiceLine> lines = Arrays.asList(line1, line2);
+        XPath xpath = XPathFactory.newInstance().newXPath();
+        NodeList nodes = (NodeList) xpath.evaluate("/Invoice/InvoiceLine", d, XPathConstants.NODESET);
 
+        List<InvoiceLine> lines = new ArrayList<>();
+        for (int i = 0; i < nodes.getLength(); i++) {
+            Node invoiceLine = nodes.item(i);
+
+            String description = xpath.evaluate("/ID", invoiceLine);
+
+            lines.add(new InvoiceLine("Stuff", BigDecimal.valueOf(14), BigDecimal.valueOf(75), BigDecimal.valueOf(5000000)));
+        }
 
         BigDecimal subTotal = new BigDecimal(xpathEval("//LegalMonetaryTotal/LineExtensionAmount"));
         BigDecimal tax = new BigDecimal(xpathEval("//TaxTotal/TaxAmount"));

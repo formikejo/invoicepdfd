@@ -10,8 +10,10 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.hasSize;
 import static org.junit.Assert.assertThat;
 
 public class InvoiceCreatorTest {
@@ -40,6 +42,9 @@ public class InvoiceCreatorTest {
 	@Test
 	public void testBill() {
 		assertThat(view.getBill().getSubTotal(), is(new BigDecimal("90.00")));
+
+		List<InvoiceLine> lines = view.getBill().getInvoiceLines();
+		assertThat(lines, hasSize(1));
 	}
 
 
