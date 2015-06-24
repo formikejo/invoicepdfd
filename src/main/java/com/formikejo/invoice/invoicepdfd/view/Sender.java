@@ -13,7 +13,8 @@ public class Sender {
     private String bankAccount;
     private String vatNumber;
 
-    public Sender(String nName, String nAddress, String nPostalCode, String nEmail, String nTelephone, String nCompanyName, String nCompanyIdentification, String nBankAccount, String nVatNumber) {
+    public Sender(String nName, String nAddress, String nPostalCode, String nEmail, String nTelephone, String nCompanyName,
+                  String nCompanyIdentification, String nBankAccount, String nVatNumber) {
         name = nName;
         address = nAddress;
         email = nEmail;

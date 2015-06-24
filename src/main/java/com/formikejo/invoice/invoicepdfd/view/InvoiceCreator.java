@@ -1,6 +1,5 @@
 package com.formikejo.invoice.invoicepdfd.view;
 
-import com.formikejo.invoice.invoicepdfd.view.*;
 import org.w3c.dom.Document;
 
 import javax.xml.xpath.XPath;
@@ -26,9 +25,23 @@ public class InvoiceCreator {
         List<InvoiceLine> lines = Arrays.asList(line1, line2);
         Bill bill1 = new Bill(lines);
 
-        Receiver receiver = new Receiver(xpathEval("//AccountingCustomerParty//Contact//Name"), (xpathEval("//AccountingCustomerParty//PostalAddress//StreetName") + " " + xpathEval("//AccountingCustomerParty//PostalAddress//BuildingNumber") + ", " + xpathEval("//AccountingCustomerParty//PostalAddress//BuildingName")), xpathEval("//AccountingCustomerParty//PostalAddress//PostalZone") + " " + xpathEval("//AccountingCustomerParty//PostalAddress//CityName") + ", " + xpathEval("//AccountingCustomerParty//PostalAddress//CountrySubentity"), xpathEval("//AccountingCustomerParty//PartyName//Name"), xpathEval("/Invoice/OrderReference//ID"));
+        Receiver receiver = new Receiver(
+                xpathEval("//AccountingCustomerParty//Contact//Name"),
+                xpathEval("//AccountingCustomerParty//PostalAddress//StreetName") + " " + xpathEval("//AccountingCustomerParty//PostalAddress//BuildingNumber") + ", " + xpathEval("//AccountingCustomerParty//PostalAddress//BuildingName"),
+                xpathEval("//AccountingCustomerParty//PostalAddress//PostalZone") + " " + xpathEval("//AccountingCustomerParty//PostalAddress//CityName") + ", " + xpathEval("//AccountingCustomerParty//PostalAddress//CountrySubentity"),
+                xpathEval("//AccountingCustomerParty//PartyName//Name"),
+                xpathEval("/Invoice/OrderReference//ID"));
 
-        Sender sender = new Sender(xpathEval("//AccountingSupplierParty//Contact//Name"), (xpathEval("//AccountingSupplierParty//PostalAddress//StreetName") + " " + xpathEval("//AccountingSupplierParty//PostalAddress//BuildingNumber") + ", " + xpathEval("//AccountingSupplierParty//PostalAddress//BuildingName")), xpathEval("//AccountingSupplierParty//PostalAddress//PostalZone") + " " + xpathEval("//AccountingSupplierParty//PostalAddress//CityName") + ", " + xpathEval("//AccountingSupplierParty//PostalAddress//CountrySubentity"), xpathEval("//AccountingSupplierParty//Contact//ElectronicMail"), xpathEval("//AccountingSupplierParty//Contact//Telephone"), xpathEval("//AccountingSupplierParty//PartyName//Name"), xpathEval("//AccountingSupplierParty/Party/PartyIdentification/ID"), xpathEval("//PaymentMeans/PayeeFinancialAccount/ID"), xpathEval("//Party/PartyTaxScheme/CompanyID"));
+        Sender sender = new Sender(
+                xpathEval("//AccountingSupplierParty//Contact//Name"),
+                xpathEval("//AccountingSupplierParty//PostalAddress//StreetName") + " " + xpathEval("//AccountingSupplierParty//PostalAddress//BuildingNumber") + ", " + xpathEval("//AccountingSupplierParty//PostalAddress//BuildingName"),
+                xpathEval("//AccountingSupplierParty//PostalAddress//PostalZone") + " " + xpathEval("//AccountingSupplierParty//PostalAddress//CityName") + ", " + xpathEval("//AccountingSupplierParty//PostalAddress//CountrySubentity"),
+                xpathEval("//AccountingSupplierParty//Contact//ElectronicMail"),
+                xpathEval("//AccountingSupplierParty//Contact//Telephone"),
+                xpathEval("//AccountingSupplierParty//PartyName//Name"),
+                xpathEval("//AccountingSupplierParty/Party/PartyIdentification/ID"),
+                xpathEval("//PaymentMeans/PayeeFinancialAccount/ID"),
+                xpathEval("//Party/PartyTaxScheme/CompanyID"));
 
         String IssueDate = xpathEval("/Invoice/IssueDate");
 

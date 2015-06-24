@@ -9,13 +9,6 @@ public class InvoiceLine {
     private BigDecimal rate;
     private BigDecimal total;
 
-    public InvoiceLine(String nDescription, BigDecimal nAmount, BigDecimal nRate) {
-        description = nDescription;
-        amount = nAmount;
-        rate = nRate;
-        total = amount.multiply(rate);
-    }
-
     public InvoiceLine(String nDescription, BigDecimal nAmount, BigDecimal nRate, BigDecimal nTotal) {
 
         description = nDescription;
