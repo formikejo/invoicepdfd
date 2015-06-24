@@ -23,7 +23,7 @@ public class Main extends Application<InvoiceConfiguration> {
 
     @Override
     public void run(InvoiceConfiguration configuration, Environment environment) {
-        InvoiceResourceXML resource = new InvoiceResourceXML();
+        InvoiceResource resource = new InvoiceResource();
         environment.jersey().register(resource);
         environment.jersey().register(MultiPartFeature.class);
     }

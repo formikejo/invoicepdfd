@@ -1,6 +1,8 @@
 package com.formikejo.invoice.invoicepdfd;
 
 import com.codahale.metrics.annotation.Timed;
+import com.formikejo.invoice.invoicepdfd.view.InvoiceCreator;
+import com.formikejo.invoice.invoicepdfd.view.InvoiceView;
 import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.w3c.dom.Document;
@@ -18,13 +20,12 @@ import java.io.IOException;
 import java.io.InputStream;
 
 @Path("/invoice")
-public class InvoiceResourceXML {
+public class InvoiceResource {
 
     @Timed
     @POST
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces("text/html")
-
     public InvoiceView processInvoice(@FormDataParam("xml") final InputStream inputStream, @FormDataParam("xml") final FormDataContentDisposition contentDispositionHeader) throws ParserConfigurationException, IOException, SAXException, XPathExpressionException {
         Document document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(inputStream);
         return new InvoiceCreator(document).getDataFromXML();

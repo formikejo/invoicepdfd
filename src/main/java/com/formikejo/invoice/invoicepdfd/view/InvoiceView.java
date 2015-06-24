@@ -1,4 +1,4 @@
-package com.formikejo.invoice.invoicepdfd;
+package com.formikejo.invoice.invoicepdfd.view;
 
 import io.dropwizard.views.View;
 

@@ -1,5 +1,6 @@
-package com.formikejo.invoice.invoicepdfd;
+package com.formikejo.invoice.invoicepdfd.view;
 
+import com.formikejo.invoice.invoicepdfd.view.*;
 import org.w3c.dom.Document;
 
 import javax.xml.xpath.XPath;
