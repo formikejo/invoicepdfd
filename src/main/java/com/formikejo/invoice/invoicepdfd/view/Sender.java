@@ -28,7 +28,7 @@ public class Sender {
         return address;
     }
 
-    public String getvatNumber() {
+    public String getVatNumber() {
         return vatNumber;
     }
 

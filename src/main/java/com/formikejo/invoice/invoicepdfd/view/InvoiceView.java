@@ -25,7 +25,7 @@ public class InvoiceView extends View {
         return receiver;
     }
 
-    public String getpaymentTerms() {
+    public String getPaymentTerms() {
         return paymentTerms;
     }
 
@@ -41,7 +41,7 @@ public class InvoiceView extends View {
         return issueDate;
     }
 
-    public String getid() {
+    public String getId() {
         return id;
     }
 }

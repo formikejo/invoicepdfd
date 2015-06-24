@@ -37,7 +37,7 @@ public class InvoiceCreator {
             lines.add(new InvoiceLine(description, amount, rate, value));
         }
 
-        BigDecimal subTotal = new BigDecimal(xpathEval("//LegalMonetaryTotal/LineExtensionAmount"));
+        BigDecimal subTotal = new BigDecimal(xpathEval("//LegalMonetaryTotal/TaxExclusiveAmount"));
         BigDecimal tax = new BigDecimal(xpathEval("//TaxTotal/TaxAmount"));
         BigDecimal total = new BigDecimal(xpathEval("//LegalMonetaryTotal/PayableAmount"));
         String taxType = (xpathEval("//TaxTotal//TaxScheme//TaxTypeCode"));
@@ -64,7 +64,7 @@ public class InvoiceCreator {
 
         String issueDate = xpathEval("/Invoice/IssueDate");
         String invoiceID = xpathEval("/Invoice/ID");
-        String paymentTerms = xpathEval("/Invoice/PaymentTerms");
+        String paymentTerms = xpathEval("/Invoice/PaymentTerms/Note");
 
         return new InvoiceView(receiver, sender, bill, issueDate, invoiceID, paymentTerms);
     }

@@ -73,15 +73,20 @@ td.subtotalRow{
 text-align: right;
 }
 
-
-
 .footspacer td{
 padding-bottom: 16px;
 }
 
 .amount {
     text-align: right;
+    padding-bottom: 16px;
+    padding-top: 16px;
+
 }
+.spacer{
+padding-bottom: 40px;
+}
+
 
 thead tr td {
     border-bottom: 1px solid black;

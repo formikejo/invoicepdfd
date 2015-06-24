@@ -24,7 +24,7 @@ public class Receiver {
         return orderReferenceID;
     }
 
-    public String getpostalCode() {
+    public String getPostalCode() {
         return postalCode;
     }
 

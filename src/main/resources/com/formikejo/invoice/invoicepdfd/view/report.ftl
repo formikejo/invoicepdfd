@@ -25,6 +25,9 @@
     </tr>
     </thead>
     <tbody>
+
+
+
     <#list bill.invoiceLines as line>
         <tr>
             <td>${line.description}</td>
@@ -33,6 +36,9 @@
             <td class="amount"> &euro;${line.total?string["#.00"]}</td>
         </tr>
     </#list>
+    <tr>
+        <td class="spacer">
+    </tr>
 
     </tbody>
     <tfoot>
