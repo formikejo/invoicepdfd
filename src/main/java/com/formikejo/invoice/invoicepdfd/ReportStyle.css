@@ -1,0 +1,88 @@
+html{
+font-family:"helvetica neue", "arial", sans-serif ;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top:36px;
+}
+
+p {
+    margin: 0;
+}
+
+.title{
+text-align: right;
+color: #d55921;
+font-size: 50px;
+}
+
+.subTitle{
+color: #464644;
+text-align: right;
+font-style: italic;
+}
+
+.customer-name {
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+.reminder {
+    margin-top: 36px;
+}
+
+.KvKreminder {
+    margin-top: 50px;
+    float: right;
+    text-align: right;
+}
+.TxtBoxFactuurnummer{
+    text-align: right;
+     float: right;
+}
+.totalAmount{
+border-top: 1px solid black;
+}
+.totalAmount td.totalAmount{
+text-align: right;
+}
+.bottomCompanyName{
+padding-top: 100px;
+}
+.bottomTelephone{
+margin-top: 12px;
+}
+.bottomAdress{
+margin-top: 32px;
+}
+
+td.subtotalRow span{
+    border-top: 1px solid black;
+    display:inline-block;
+    padding-top: 4px;
+    padding-left: 10px;
+}
+
+
+
+td.subtotalRow{
+text-align: right;
+}
+
+
+
+.footspacer td{
+padding-bottom: 16px;
+}
+
+.amount {
+    text-align: right;
+}
+
+thead tr td {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}

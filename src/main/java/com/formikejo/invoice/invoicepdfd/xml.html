@@ -1,0 +1,21 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="page-header">Invoice Generator XML</h1>
+
+    <form method="POST" action="/invoice" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="receiverName">
+                XML File:
+            </label>
+            <input class="form-control" id="receiverName" type="file" name="xml"/>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Generate Invoice</button>
+    </form>
+</div>
+</body>
+</html>
