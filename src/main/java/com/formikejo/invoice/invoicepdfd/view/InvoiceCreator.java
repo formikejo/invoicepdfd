@@ -63,11 +63,11 @@ public class InvoiceCreator {
                 xpathEval("//PaymentMeans/PayeeFinancialAccount/ID"),
                 xpathEval("//Party/PartyTaxScheme/CompanyID"));
 
-        String IssueDate = xpathEval("/Invoice/IssueDate");
+        String issueDate = xpathEval("/Invoice/IssueDate");
+        String invoiceID = xpathEval("/Invoice/ID");
+        String paymentTerms =  xpathEval("/Invoice/PaymentTerms");
 
-        String InvoiceID = xpathEval("/Invoice/ID");
-
-        return new InvoiceView(receiver, sender, bill1,IssueDate , InvoiceID);
+        return new InvoiceView(receiver, sender, bill1,issueDate , invoiceID, paymentTerms);
     }
 
     private String xpathEval(String path) throws XPathExpressionException {

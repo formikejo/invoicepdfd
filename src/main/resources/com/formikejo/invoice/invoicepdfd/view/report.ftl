@@ -60,8 +60,7 @@
     </tfoot>
 </table>
 
-<p class="reminder">U wordt verzocht dit bedrag binnen 30 dagen onder vermelding van het factuurnummer over te maken op
-    rekening NL47 INGB 0006 9208 03 t.n.v. Publysher </p>
+<p class="reminder">${paymentTerms}</p>
 
 <p class="bottomCompanyName"> ${sender.companyName}
 

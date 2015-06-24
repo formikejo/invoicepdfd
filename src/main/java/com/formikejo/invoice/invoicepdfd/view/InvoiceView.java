@@ -9,18 +9,24 @@ public class InvoiceView extends View {
     private Bill bill;
     private String issueDate;
     private String id;
+    private String paymentTerms;
 
-    public InvoiceView(Receiver nReceiver, Sender nSender, Bill nBill, String nIssueDate, String nid) {
+    public InvoiceView(Receiver nReceiver, Sender nSender, Bill nBill, String nIssueDate, String nid, String nPaymentTerms) {
         super("report.ftl");
         receiver = nReceiver;
         sender = nSender;
         bill = nBill;
         issueDate = nIssueDate;
         id = nid;
+        paymentTerms = nPaymentTerms;
     }
 
     public Receiver getReceiver() {
         return receiver;
+    }
+
+    public String getpaymentTerms() {
+        return paymentTerms;
     }
 
     public Bill getBill() {
