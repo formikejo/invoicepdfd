@@ -29,10 +29,12 @@ public class InvoiceCreator {
         List<InvoiceLine> lines = new ArrayList<>();
         for (int i = 0; i < nodes.getLength(); i++) {
             Node invoiceLine = nodes.item(i);
+            String description = xpath.evaluate("Item//Name", invoiceLine);
+            BigDecimal rate = new BigDecimal(xpath.evaluate("//Price//PriceAmount", invoiceLine));
+            BigDecimal amount = new BigDecimal(xpath.evaluate("InvoicedQuantity", invoiceLine));
+            BigDecimal value = new BigDecimal(xpath.evaluate("LineExtensionAmount", invoiceLine));
 
-            String description = xpath.evaluate("/ID", invoiceLine);
-
-            lines.add(new InvoiceLine("Stuff", BigDecimal.valueOf(14), BigDecimal.valueOf(75), BigDecimal.valueOf(5000000)));
+            lines.add(new InvoiceLine(description ,amount ,rate ,value ));
         }
 
         BigDecimal subTotal = new BigDecimal(xpathEval("//LegalMonetaryTotal/LineExtensionAmount"));

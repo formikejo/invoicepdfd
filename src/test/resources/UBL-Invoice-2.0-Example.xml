@@ -193,8 +193,8 @@
 	</cac:LegalMonetaryTotal>
 	<cac:InvoiceLine>
 		<cbc:ID>A</cbc:ID>
-		<cbc:InvoicedQuantity unitCode="KG">100</cbc:InvoicedQuantity>
-		<cbc:LineExtensionAmount currencyID="GBP">100.00</cbc:LineExtensionAmount>
+		<cbc:InvoicedQuantity unitCode="KG">90</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="GBP">90.00</cbc:LineExtensionAmount>
 		<cac:OrderLineReference>
 			<cbc:LineID>1</cbc:LineID>
 			<cbc:SalesOrderLineID>A</cbc:SalesOrderLineID>
