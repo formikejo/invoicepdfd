@@ -18,7 +18,7 @@ public class Main extends Application<InvoiceConfiguration> {
     @Override
     public void initialize(Bootstrap<InvoiceConfiguration> bootstrap) {
         bootstrap.addBundle(new ViewBundle<InvoiceConfiguration>());
-        bootstrap.addBundle(new AssetsBundle("/com/formikejo/invoice/invoicepdfd", "/assets", "index.html"));
+        bootstrap.addBundle(new AssetsBundle("/assets", "/assets"));
     }
 
     @Override
