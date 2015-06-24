@@ -9,6 +9,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 import java.io.IOException;
+import java.math.BigDecimal;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -35,6 +36,12 @@ public class InvoiceCreatorTest {
 		assertThat(view.getReceiver().getCompanyName(), is("IYT Corporation"));
 		// todo: check other receiver fields
 	}
+
+	@Test
+	public void testBill() {
+		assertThat(view.getBill().getTotalAmount(), is(new BigDecimal("107.50")));
+	}
+
 
 
 }

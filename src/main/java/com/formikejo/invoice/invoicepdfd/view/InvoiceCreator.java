@@ -23,7 +23,8 @@ public class InvoiceCreator {
         InvoiceLine line1 = new InvoiceLine("Stuff", BigDecimal.valueOf(14), BigDecimal.valueOf(75), BigDecimal.valueOf(5000000));
         InvoiceLine line2 = new InvoiceLine("More stuff", BigDecimal.valueOf(34), BigDecimal.valueOf(34), BigDecimal.valueOf(34000));
         List<InvoiceLine> lines = Arrays.asList(line1, line2);
-        Bill bill1 = new Bill(lines);
+
+        Bill bill1 = new Bill(lines, new BigDecimal(xpathEval("//LegalMonetaryTotal/PayableAmount")));
 
         Receiver receiver = new Receiver(
                 xpathEval("//AccountingCustomerParty//Contact//Name"),
