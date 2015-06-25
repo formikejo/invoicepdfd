@@ -1,7 +1,12 @@
 html{
 font-family:"helvetica neue", "arial", sans-serif ;
+height: 100%;
+width: 100%;
 }
-
+body{
+height: 100%;
+width: 100%;
+}
 
 table {
     width: 100%;
@@ -14,11 +19,21 @@ p {
 }
 .img{
 margin-top: 25px;
+margin-bottom: 50px;
 }
 
 .TopRecieverBox{
-margin-top: 50px;
 }
+
+.BottomInfo{
+position: absolute;
+bottom: 0px;
+right:0;
+left:0;
+
+overflow: auto;
+}
+
 
 
 .customer-name {
@@ -34,12 +49,12 @@ margin-top: 50px;
 .KvKreminder {
     margin-top: 50px;
     float: right;
+    right:0;
     text-align: right;
 }
 .TxtBoxFactuurnummer{
     text-align: right;
      float: right;
-     margin-top: 50px;
 }
 .totalAmount{
 border-top: 1px solid black;

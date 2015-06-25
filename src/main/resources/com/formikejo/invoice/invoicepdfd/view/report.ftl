@@ -7,18 +7,20 @@
 </head>
 <body>
 
-<div class = title>
-<img class = img src="/assets/logos/Publysher.png">
-    </div>
+<div class=title>
+    <img class=img src="/assets/logos/Publysher.png">
+</div>
 
 <p class="customer-name">${receiver.companyName}</p>
 
 <p class="TxtBoxFactuurnummer">
     ${issueDate}<br>
     <#if receiver.orderReferenceID?has_content>Referentie: ${receiver.orderReferenceID}<br></#if>
-    <#if id?has_content>Factuurnummer: ${id}</#if></p>
+    <#if id?has_content>Factuurnummer: ${id}</#if>
+</p>
 
-<p class= "TopRecieverBox"><#if receiver.name?has_content>t.a.v. ${receiver.name} <br></#if>
+<p class="TopRecieverBox">
+    <#if receiver.name?has_content>t.a.v. ${receiver.name} <br></#if>
     ${receiver.streetName} <br>
     ${receiver.postalCode}
 </p>
@@ -33,7 +35,6 @@
     </tr>
     </thead>
     <tbody>
-
 
 
     <#list bill.invoiceLines as line>
@@ -75,24 +76,21 @@
     </tr>
     </tfoot>
 </table>
-
 <p class="reminder">${paymentTerms}</p>
 
-<p class="bottomCompanyName"> ${sender.companyName}
-
-<p>
-
-<p class="KvKreminder">
+<div class = "BottomInfo">
+    <p class="bottomCompanyName"> ${sender.companyName}
+    <p>
+    <p class="KvKreminder">
         <#if sender.companyIdentification?has_content>KvK: ${sender.companyIdentification}<br></#if>
         <#if sender.vatNumber?has_content>${bill.taxType} nummer: ${sender.vatNumber}<br></#if>
-        <#if sender.bankAccount?has_content>Bank:${sender.bankAccount} </#if>
-</p>
-
-<p class="bottomAdress">${sender.address} <br> ${sender.postalCode} </p>
-
-<p class="bottomTelephone">
-    <#if sender.telephone?has_content>T: ${sender.telephone}<br></#if>
-    <#if sender.email?has_content>E: ${sender.email} </#if>
-</p>
+        <#if sender.bankAccount?has_content>Bank:${sender.bankAccount}</#if>
+    </p>
+    <p class="bottomAdress">${sender.address} <br> ${sender.postalCode} </p>
+    <p class="bottomTelephone">
+        <#if sender.telephone?has_content>T: ${sender.telephone}<br></#if>
+        <#if sender.email?has_content>E: ${sender.email}</#if>
+    </p>
+</div>
 </body>
 </html>
