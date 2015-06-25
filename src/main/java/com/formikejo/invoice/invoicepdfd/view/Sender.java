@@ -12,7 +12,7 @@ public class Sender {
     private String bankAccount;
     private String vatNumber;
 
-    public Sender( String nAddress, String nPostalCode, String nEmail, String nTelephone, String nCompanyName,
+    public Sender(String nAddress, String nPostalCode, String nEmail, String nTelephone, String nCompanyName,
                   String nCompanyIdentification, String nBankAccount, String nVatNumber) {
         address = nAddress;
         email = nEmail;

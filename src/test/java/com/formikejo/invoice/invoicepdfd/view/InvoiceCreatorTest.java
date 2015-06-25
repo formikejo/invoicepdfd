@@ -2,10 +2,8 @@ package com.formikejo.invoice.invoicepdfd.view;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 import java.io.IOException;
@@ -22,9 +20,9 @@ public class InvoiceCreatorTest {
 
     @Before
     public void setUp() throws ParserConfigurationException, IOException, SAXException, XPathExpressionException {
-   //     Document d = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(getClass().getResourceAsStream("/UBL-Invoice-2.0-Example.xml"));
-   //     InvoiceCreator creator = new InvoiceCreator(d);
-   //    view = creator.getDataFromXML();
+        //     Document d = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(getClass().getResourceAsStream("/UBL-Invoice-2.0-Example.xml"));
+        //     InvoiceCreator creator = new InvoiceCreator(d);
+        //    view = creator.getDataFromXML();
     }
 
     @Test
@@ -60,10 +58,10 @@ public class InvoiceCreatorTest {
         List<InvoiceLine> lines = view.getBill().getInvoiceLines();
         assertThat(lines, hasSize(1));
 
-        assertThat(lines.get(0).getDescription(),is("beeswax"));
-        assertThat(lines.get(0).getRate(),is(new BigDecimal("1.00")));
-        assertThat(lines.get(0).getAmount(),is(new BigDecimal("90")));
-        assertThat(lines.get(0).getTotal(),is(new BigDecimal("90.00")));
+        assertThat(lines.get(0).getDescription(), is("beeswax"));
+        assertThat(lines.get(0).getRate(), is(new BigDecimal("1.00")));
+        assertThat(lines.get(0).getAmount(), is(new BigDecimal("90")));
+        assertThat(lines.get(0).getTotal(), is(new BigDecimal("90.00")));
     }
 
     @Test

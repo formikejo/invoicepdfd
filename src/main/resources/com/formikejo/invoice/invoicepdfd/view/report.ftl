@@ -9,7 +9,7 @@
 
 <div class=title>
     <#if imgStream?has_content>
-        <img class=img src= ${imgStream}>
+        <img class=img src=${imgStream}>
         <#elseif sender.companyName?has_content>
             <h1>${sender.companyName}</h1>
     </#if>
@@ -82,15 +82,18 @@
 </table>
 <p class="reminder">${paymentTerms}</p>
 
-<div class = "BottomInfo">
+<div class="BottomInfo">
     <p class="bottomCompanyName"> ${sender.companyName}
+
     <p>
+
     <p class="KvKreminder">
         <#if sender.companyIdentification?has_content>KvK: ${sender.companyIdentification}<br></#if>
         <#if sender.vatNumber?has_content>${bill.taxType} nummer: ${sender.vatNumber}<br></#if>
         <#if sender.bankAccount?has_content>Bank:${sender.bankAccount}</#if>
     </p>
     <p class="bottomAdress">${sender.address} <br> ${sender.postalCode} </p>
+
     <p class="bottomTelephone">
         <#if sender.telephone?has_content>T: ${sender.telephone}<br></#if>
         <#if sender.email?has_content>E: ${sender.email}</#if>

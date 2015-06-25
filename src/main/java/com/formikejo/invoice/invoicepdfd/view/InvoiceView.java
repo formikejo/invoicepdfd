@@ -22,12 +22,11 @@ public class InvoiceView extends View {
         id = nid;
         paymentTerms = nPaymentTerms;
         imgStream = nImgStream;
-        if(nLayoutScheme.equals("Style 1"))
-        {
-            layoutScheme="assets/Graphics Scheme 1.css";
+        if (nLayoutScheme.equals("Style 1")) {
+            layoutScheme = "assets/Graphics Scheme 1.css";
         }
-        if(nLayoutScheme.equals("Style 2")){
-            layoutScheme="assets/Graphics Scheme 2.css";
+        if (nLayoutScheme.equals("Style 2")) {
+            layoutScheme = "assets/Graphics Scheme 2.css";
         }
 
     }
@@ -40,7 +39,7 @@ public class InvoiceView extends View {
         return imgStream;
     }
 
-    public String getLayoutScheme(){
+    public String getLayoutScheme() {
         return layoutScheme;
     }
 

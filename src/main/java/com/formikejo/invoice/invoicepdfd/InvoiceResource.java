@@ -16,7 +16,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.concurrent.atomic.AtomicLong;
 
 @Path("/invoice")
 public class InvoiceResource {
@@ -38,7 +37,7 @@ public class InvoiceResource {
         } catch (SAXException | IOException e) {
             throw new WebApplicationException("No XML provided", HttpStatus.BAD_REQUEST_400);
         }
-        return new InvoiceCreator(document,imgStream,layoutScheme).getDataFromXML();
+        return new InvoiceCreator(document, imgStream, layoutScheme).getDataFromXML();
 
     }
 

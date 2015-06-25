@@ -106,7 +106,9 @@
 
     <!-->Payment Note Start</!-->
     <cac:PaymentTerms>
-        <cbc:Note>Gelieve het totaalbedrag binnen 14 dagen over te maken op rekening nummer: NL54 KNAB 0731 9207 75 op naam van Corpus Company BV</cbc:Note>
+        <cbc:Note>Gelieve het totaalbedrag binnen 14 dagen over te maken op rekening nummer: NL54 KNAB 0731 9207 75 op
+            naam van Corpus Company BV
+        </cbc:Note>
     </cac:PaymentTerms>
 
     <!-->TAX Start</!-->
@@ -128,43 +130,43 @@
     </cac:LegalMonetaryTotal>
     <!-->TAX End</!-->
     <!-->Product Start      Product Start      Product Start      Product Start      Product Start      Product Start</!-->
-        <cac:InvoiceLine>
-            <cbc:ID>A</cbc:ID>
-            <cbc:InvoicedQuantity unitCode="Pieces">1</cbc:InvoicedQuantity>
-            <cbc:LineExtensionAmount currencyID="Euro">20.66</cbc:LineExtensionAmount>
-            <cac:OrderLineReference>
-                <cac:OrderReference>
-                    <cbc:ID></cbc:ID>
-                    <cbc:SalesOrderID></cbc:SalesOrderID>
-                    <cbc:UUID></cbc:UUID>
-                    <cbc:IssueDate>2015-06-22</cbc:IssueDate>
-                </cac:OrderReference>
-            </cac:OrderLineReference>
-            <cac:TaxTotal>
-                <cbc:TaxAmount currencyID="Euro">4.34</cbc:TaxAmount>
-                <cac:TaxSubtotal>
-                    <cbc:TaxableAmount currencyID="GBP">20.66</cbc:TaxableAmount>
-                    <cbc:TaxAmount currencyID="GBP">4.34</cbc:TaxAmount>
-                    <cac:TaxCategory>
-                        <cbc:ID>A</cbc:ID>
-                        <cbc:Percent>21.0</cbc:Percent>
-                        <cac:TaxScheme>
-                            <cbc:TaxTypeCode>BTW</cbc:TaxTypeCode>
-                        </cac:TaxScheme>
-                    </cac:TaxCategory>
-                </cac:TaxSubtotal>
-            </cac:TaxTotal>
-            <cac:Item>
-                <cbc:Description></cbc:Description>
-                <cbc:Name>10 ritten sportkaart Corpus Fit</cbc:Name>
-                <cac:SellersItemIdentification>
-                    <cbc:ID></cbc:ID>
-                </cac:SellersItemIdentification>
-            </cac:Item>
-            <cac:Price>
-                <cbc:PriceAmount currencyID="Euro">20.66</cbc:PriceAmount>
-                <cbc:BaseQuantity unitCode="Euro">1</cbc:BaseQuantity>
-            </cac:Price>
-        </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>A</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="Pieces">1</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="Euro">20.66</cbc:LineExtensionAmount>
+        <cac:OrderLineReference>
+            <cac:OrderReference>
+                <cbc:ID></cbc:ID>
+                <cbc:SalesOrderID></cbc:SalesOrderID>
+                <cbc:UUID></cbc:UUID>
+                <cbc:IssueDate>2015-06-22</cbc:IssueDate>
+            </cac:OrderReference>
+        </cac:OrderLineReference>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="Euro">4.34</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="GBP">20.66</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="GBP">4.34</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:ID>A</cbc:ID>
+                    <cbc:Percent>21.0</cbc:Percent>
+                    <cac:TaxScheme>
+                        <cbc:TaxTypeCode>BTW</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description></cbc:Description>
+            <cbc:Name>10 ritten sportkaart Corpus Fit</cbc:Name>
+            <cac:SellersItemIdentification>
+                <cbc:ID></cbc:ID>
+            </cac:SellersItemIdentification>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="Euro">20.66</cbc:PriceAmount>
+            <cbc:BaseQuantity unitCode="Euro">1</cbc:BaseQuantity>
+        </cac:Price>
+    </cac:InvoiceLine>
     <!-->Product End      Product End      Product End      Product End      Product End      Product End</!-->
-    </Invoice>
+</Invoice>
