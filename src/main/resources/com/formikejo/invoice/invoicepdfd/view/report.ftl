@@ -8,7 +8,7 @@
 <body>
 
 <div class = title>
-<img class = img src="/assets/logos/Document1.png"">
+<img class = img src="/assets/logos/Publysher.png">
     </div>
 
 <p class="customer-name">${receiver.companyName}</p>
@@ -18,7 +18,10 @@
     <#if receiver.orderReferenceID?has_content>Referentie: ${receiver.orderReferenceID}<br></#if>
     <#if id?has_content>Factuurnummer: ${id}</#if></p>
 
-<p class= "TopRecieverBox">t.a.v. ${receiver.name} <br> ${receiver.streetName} <br> ${receiver.postalCode}</p>
+<p class= "TopRecieverBox"><#if receiver.name?has_content>t.a.v. ${receiver.name} <br></#if>
+    ${receiver.streetName} <br>
+    ${receiver.postalCode}
+</p>
 
 <table class="table">
     <thead>
