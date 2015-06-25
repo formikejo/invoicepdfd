@@ -16,9 +16,13 @@ import java.util.List;
 public class InvoiceCreator {
 
     private Document d;
+    private String imgStream;
+    private String layoutScheme;
 
-    public InvoiceCreator(Document d) {
+    public InvoiceCreator(Document d, String imgStream, String layoutScheme) {
         this.d = d;
+        this.imgStream = imgStream;
+        this.layoutScheme = layoutScheme;
     }
 
     public InvoiceView getDataFromXML() throws XPathExpressionException {
@@ -66,7 +70,7 @@ public class InvoiceCreator {
         String invoiceID = xpathEval("/Invoice/ID");
         String paymentTerms = xpathEval("/Invoice/PaymentTerms/Note");
 
-        return new InvoiceView(receiver, sender, bill, issueDate, invoiceID, paymentTerms);
+        return new InvoiceView(receiver, sender, bill, issueDate, invoiceID, paymentTerms, imgStream, layoutScheme);
     }
 
     private String xpathEval(String path) throws XPathExpressionException {

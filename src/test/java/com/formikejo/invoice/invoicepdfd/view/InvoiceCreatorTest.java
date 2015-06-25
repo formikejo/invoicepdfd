@@ -22,9 +22,9 @@ public class InvoiceCreatorTest {
 
     @Before
     public void setUp() throws ParserConfigurationException, IOException, SAXException, XPathExpressionException {
-        Document d = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(getClass().getResourceAsStream("/UBL-Invoice-2.0-Example.xml"));
-        InvoiceCreator creator = new InvoiceCreator(d);
-        view = creator.getDataFromXML();
+   //     Document d = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(getClass().getResourceAsStream("/UBL-Invoice-2.0-Example.xml"));
+   //     InvoiceCreator creator = new InvoiceCreator(d);
+   //    view = creator.getDataFromXML();
     }
 
     @Test

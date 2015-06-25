@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="assets/ReportStyle.css">
-    <link rel="stylesheet" type="text/css" href="assets/Color Sceme 1.css">
+    <link rel="stylesheet" type="text/css" href="assets/Layout Scheme.css">
+    <link rel="stylesheet" type="text/css" href="${layoutScheme}">
     <title>Invoice Template 1</title>
 </head>
 <body>
 
 <div class=title>
-    <img class=img src="/assets/logos/Publysher.png">
+    <#if imgStream?has_content>
+        <img class=img src= ${imgStream}>
+        <#elseif sender.companyName?has_content>
+            <h1>${sender.companyName}</h1>
+    </#if>
 </div>
 
 <p class="customer-name">${receiver.companyName}</p>
