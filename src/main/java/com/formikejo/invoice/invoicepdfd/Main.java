@@ -1,12 +1,15 @@
 package com.formikejo.invoice.invoicepdfd;
 
 
+import com.codahale.metrics.Gauge;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
 import org.glassfish.jersey.media.multipart.MultiPartFeature;
+
+import static com.codahale.metrics.MetricRegistry.name;
 
 
 public class Main extends Application<InvoiceConfiguration> {
@@ -23,9 +26,19 @@ public class Main extends Application<InvoiceConfiguration> {
 
     @Override
     public void run(InvoiceConfiguration configuration, Environment environment) {
-        InvoiceResource resource = new InvoiceResource();
+        InvoiceViewRepository repository = new InvoiceViewRepository();
+
+        InvoiceResource resource = new InvoiceResource(repository);
         environment.jersey().register(resource);
+
         environment.jersey().register(MultiPartFeature.class);
+
+        environment.metrics().register(name(InvoiceViewRepository.class, "successCount"), new Gauge<Integer>() {
+            @Override
+            public Integer getValue() {
+                return repository.countSuccess();
+            }
+        });
     }
 
 }

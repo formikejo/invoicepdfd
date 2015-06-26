@@ -24,7 +24,11 @@ import java.util.UUID;
 @Path("/")
 public class InvoiceResource {
 
-	InvoiceViewRepository repository = new InvoiceViewRepository();
+	InvoiceViewRepository repository;
+
+	public InvoiceResource(InvoiceViewRepository repository) {
+		this.repository = repository;
+	}
 
 	@Timed
 	@POST
