@@ -24,36 +24,37 @@ import java.util.UUID;
 @Path("/")
 public class InvoiceResource {
 
-    InvoiceViewRepository repository = new InvoiceViewRepository();
-    @Timed
-    @POST
-    @Consumes(MediaType.MULTIPART_FORM_DATA)
-    @Produces("text/html")
-    @Path("/invoice")
-    public InvoiceView processInvoice(
-            @FormDataParam("xml") final InputStream inputStream,
-        @FormDataParam("xml") final FormDataContentDisposition contentDispositionHeader,
-        @FormDataParam("img") final String imgStream,
-        @FormDataParam("layoutScheme") final String layoutScheme
-        ) throws ParserConfigurationException, XPathExpressionException {
-            Document document = null;
-            try {
-                document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(inputStream);
-            } catch (SAXException | IOException e) {
-                throw new WebApplicationException("No XML provided", HttpStatus.BAD_REQUEST_400);
-            }
-            InvoiceView invV = new InvoiceCreator(document, imgStream, layoutScheme).getDataFromXML();
-            URI uri = UriBuilder.fromUri("/invoice/"+repository.store(invV)).build();
-            Response response = Response.seeOther(uri).build();
-            throw new WebApplicationException(response);
-    }
-    @Timed
-    @GET
-    @Produces("text/html")
-    @Path("/invoice/{UUID}")
-    public InvoiceView URLInvoice(@PathParam("UUID") UUID uuid){
-        return repository.get(uuid);
-    }
+	InvoiceViewRepository repository = new InvoiceViewRepository();
+
+	@Timed
+	@POST
+	@Consumes(MediaType.MULTIPART_FORM_DATA)
+	@Path("/invoice")
+	public Response processInvoice(
+			@FormDataParam("xml") final InputStream inputStream,
+			@FormDataParam("xml") final FormDataContentDisposition contentDispositionHeader,
+			@FormDataParam("img") final String imgStream,
+			@FormDataParam("layoutScheme") final String layoutScheme
+	) throws ParserConfigurationException, XPathExpressionException {
+		Document document = null;
+		try {
+			document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(inputStream);
+		} catch (SAXException | IOException e) {
+			throw new WebApplicationException("No XML provided", HttpStatus.BAD_REQUEST_400);
+		}
+		InvoiceView invV = new InvoiceCreator(document, imgStream, layoutScheme).getDataFromXML();
+
+		URI uri = UriBuilder.fromUri("/invoice/" + repository.store(invV)).build();
+		return Response.seeOther(uri).build();
+	}
+
+	@Timed
+	@GET
+	@Produces("text/html")
+	@Path("/invoice/{UUID}")
+	public InvoiceView getInvoice(@PathParam("UUID") UUID uuid) {
+		return repository.get(uuid);
+	}
 
 
 }
