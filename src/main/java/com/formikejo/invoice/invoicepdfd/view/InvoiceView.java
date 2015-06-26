@@ -23,10 +23,10 @@ public class InvoiceView extends View {
         paymentTerms = nPaymentTerms;
         imgStream = nImgStream;
         if (nLayoutScheme.equals("Style 1")) {
-            layoutScheme = "assets/Graphics Scheme 1.css";
+            layoutScheme = "/assets/Graphics Scheme 1.css";
         }
         if (nLayoutScheme.equals("Style 2")) {
-            layoutScheme = "assets/Graphics Scheme 2.css";
+            layoutScheme = "/assets/Graphics Scheme 2.css";
         }
 
     }

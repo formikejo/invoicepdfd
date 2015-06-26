@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="assets/Layout Scheme.css">
+    <link rel="stylesheet" type="text/css" href="/assets/Layout Scheme.css">
     <link rel="stylesheet" type="text/css" href="${layoutScheme}">
     <title>Invoice Template 1</title>
 </head>
