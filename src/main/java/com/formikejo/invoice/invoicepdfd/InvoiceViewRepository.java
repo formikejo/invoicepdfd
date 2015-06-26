@@ -19,5 +19,9 @@ public class InvoiceViewRepository {
 	public InvoiceView get(UUID uuid) {
 		return map.get(uuid);
 	}
+
+    public int countSuccess() {
+        return map.size();
+    }
 }
 

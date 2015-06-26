@@ -56,6 +56,10 @@ public class InvoiceResource {
 		return repository.get(uuid);
 	}
 
+    public int countSuccess(){
+        return repository.countSuccess();
+    }
+
 
 }
 
