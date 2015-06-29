@@ -31,6 +31,9 @@ public class Main extends Application<InvoiceConfiguration> {
         InvoiceResource resource = new InvoiceResource(repository);
         environment.jersey().register(resource);
 
+        URLResource resource1 = new URLResource(repository);
+        environment.jersey().register(resource1);
+
         environment.jersey().register(MultiPartFeature.class);
 
         environment.metrics().register(name(InvoiceViewRepository.class, "successCount"), new Gauge<Integer>() {
