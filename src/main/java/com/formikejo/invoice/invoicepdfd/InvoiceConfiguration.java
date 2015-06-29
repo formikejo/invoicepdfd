@@ -1,6 +1,7 @@
 package com.formikejo.invoice.invoicepdfd;
 
-import io.dropwizard.Configuration;
-
-public class InvoiceConfiguration extends Configuration {
+/**
+ * Created by Ulm.Clemens on 29-Jun-15.
+ */
+public class InvoiceConfiguration {
 }
