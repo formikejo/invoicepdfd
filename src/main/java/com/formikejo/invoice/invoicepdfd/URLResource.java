@@ -20,9 +20,13 @@ import java.util.UUID;
 public class URLResource {
 
     InvoiceViewRepository repository;
+    String addressOfURLPDFCreator;
+    String addressOfThisServer;
 
-    public URLResource(InvoiceViewRepository repository) {
+    public URLResource(InvoiceViewRepository repository,String addressOfURLPDFCreator,String addressOfThisServer) {
         this.repository = repository;
+        this.addressOfThisServer = addressOfThisServer;
+        this.addressOfURLPDFCreator = addressOfURLPDFCreator;
     }
 
     @Timed
@@ -43,7 +47,7 @@ public class URLResource {
         }
         InvoiceView invV = new InvoiceCreator(document, imgStream, layoutScheme).getDataFromXML();
 
-        URI uri = UriBuilder.fromUri("http://192.168.1.8:8080/pdf?url=http://192.168.1.28:8080/invoice/" + repository.store(invV)).build();
+        URI uri = UriBuilder.fromUri(addressOfURLPDFCreator+"/pdf?url="+addressOfThisServer+"/invoice/" + repository.store(invV)).build();
         return Response.seeOther(uri).build();
     }
 
