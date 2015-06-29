@@ -7,9 +7,10 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class InvoiceConfiguration extends Configuration {
 
     @NotEmpty
-    private String addressOfURLPDFCreator = "http://192.168.1.8:8080";
+    private String addressOfURLPDFCreator;
+
     @NotEmpty
-    private String addressOfThisServer = "http://192.168.1.28:8080";
+    private String addressOfThisServer;
 
     @JsonProperty
     public String getAddressOfThisServer() {
