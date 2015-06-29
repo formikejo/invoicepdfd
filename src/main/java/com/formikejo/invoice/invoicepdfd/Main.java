@@ -28,7 +28,7 @@ public class Main extends Application<InvoiceConfiguration> {
     public void run(InvoiceConfiguration configuration, Environment environment) {
         InvoiceViewRepository repository = new InvoiceViewRepository();
 
-        InvoiceResource resource = new InvoiceResource(repository);
+        InvoiceResource resource = new InvoiceResource(repository, configuration.getAddressOfThisServer());
         environment.jersey().register(resource);
 
         URLResource resource1 = new URLResource(repository, configuration.getAddressOfURLPDFCreator(), configuration.getAddressOfThisServer());
